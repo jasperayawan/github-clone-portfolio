@@ -28,6 +28,8 @@ import Vid1 from '../assets/videos/stopwatch.mp4'
 
 const Home = () => {
     const [nav, setNav] = useState(false)
+    
+    const [isFollowing, setIsFollowing] = useState(false)
 
     const handleClick = () => setNav(!nav)
   return (
@@ -85,7 +87,6 @@ const Home = () => {
                         alt="" 
                         className='h-[26px]'/>
                         </div>
-                        <div className='z--10'>
                         <p className='text-[#8B949E]'>
                         <Typewriter 
                     options={{autoStart: true,
@@ -97,7 +98,6 @@ const Home = () => {
                 }}
                     />
                         </p>
-                        </div>
                     </div>
                 </div>
 
@@ -126,7 +126,10 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <button className='bg-[#21262D] w-full my-4 rounded-md block border-gray-700 py-[3px] border-[1.5px]'>Follow</button>
+                    <button className='bg-[#21262D] w-full my-4 rounded-md block border-gray-700 py-[3px] border-[1.5px]'
+                        onClick={() => setIsFollowing(!isFollowing)}>
+                            {isFollowing ? 'Following' : 'Follow'}
+                    </button>
                 </div>
 
                 <div>
