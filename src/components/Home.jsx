@@ -18,6 +18,10 @@ const Home = () => {
         {/**header */}
         <header className='w-full h-16 bg-[#161B22] flex justify-between items-center px-4 lg:px-8  fixed top-0 left-0'>
             <img src={Logo} alt="" className='w-[60px]'/>
+            <div className='text-white hidden lg:flex'>
+                <span className='lg:mx-8 mx-4'>Hobbies</span>
+                <span className='lg:mx-8 mx-4'>explore</span>
+            </div>
             <div className='text-white'>
                 <FaBars />
             </div>
@@ -101,7 +105,7 @@ const Home = () => {
 
             <div className='w-full h-full'>
                 <div className=''>
-                <div className=' flex justify-start gap-8 items-center text-[#8B949E] pb-[1rem] border-gray-700 mb-[2rem] border-b-[1px]'>
+                <div className=' flex text-[14px] flex-wrap justify-start gap-8 items-center text-[#b1b8c0] pb-[1rem] border-gray-700 mb-[2rem] border-b-[1px]'>
                 <div className='flex items-center justify-center'>
                     <FaInternetExplorer /> <NavLink to='explore' className='mr-4 ml-[5px]'>Explore</NavLink>
                 </div>
@@ -120,7 +124,7 @@ const Home = () => {
                 <div className='p-4 border-[1px] border-gray-700 rounded-lg'>
                     <div className='text-[#C9D1D9] border-b-[1px] border-gray-700 pb-4 mb-4'>
                         <p className='font-mono text-[12px]'>JasperAyawan/READ.md</p>
-                        <h1 className='text-3xl mt-2 font-bold'>Meta Crafter</h1>
+                        <h1 className='text-3xl mt-2 font-bold'>⛷ Meta Crafter</h1>
                     </div>
 
                     <p className='text-[#C9D1D9] text-[14px]'>I'm full-stack developer and content creator building my version of the digital
@@ -129,6 +133,19 @@ const Home = () => {
                          same way, from ideation and planning, all the way to finalizing the content with artistic 
                          touches. I publish that content on my YouTube channel "ForrestKnight" to more than 400k 
                          subscribers.</p>
+
+                    <div className='mt-4 border-b-4 pb-8 mb-8 border-[#333]'>
+                        <ul className='flex gap-[.2rem] flex-wrap'>
+                            <li><a href="/" className='text-white bg-red-500 px-8 text-[13px] font-mono py-[0.3rem]'>SUBSCRIBE</a></li>
+                            <li><a href="/" className='text-white bg-yellow-500 px-8 text-[13px] font-mono py-[0.3rem]'>VIEWS</a></li>
+                            <li><a href="/" className='text-white bg-blue-500 px-8 text-[13px] font-mono py-[0.3rem]'>FOLLOW</a></li>
+                            <li><a href="/" className='text-white bg-green-500 px-8 text-[13px] font-mono py-[0.3rem]'>STARS</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h1 className='font-bold text-gray-400'>🧰 Languages and Tools</h1>
+                    </div>
                 </div>
                 </div>
             </div>
