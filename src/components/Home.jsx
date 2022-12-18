@@ -146,10 +146,12 @@ const Home = () => {
 
                     <p className='text-[#C9D1D9] text-[14px]'>I'm full-stack developer and content creator building my version of the digital
                          world one step at a time. All coding projects are built from the ground up, from planning and 
-                         designing all the way to solving real-life problems with code. All video content is built the 
-                         same way, from ideation and planning, all the way to finalizing the content with artistic 
-                         touches. I publish that content on my YouTube channel "ForrestKnight" to more than 400k 
-                         subscribers.</p>
+                         designing all the way to solving real-life problems with code. Currently studying at Southern Mindanao Colleges during my 1st year college
+                         we learn c++ and on that time i don't have an idea what programming is, all i want is just to run my code and pass it to my professor, 
+                         after a few weeks I understand how computer works and I learn how to code by searching on google and watching some tutorial on Youtube.
+                         I learn web development when I was second year college and we started with HTML and CSS hehe I learn the latest technologies by myself not to my professor
+                         I inspired by sir Jomari who was the content creater on Youtube and Software Engineer of NYC because of his ability to code and insane in programming.
+                         Hope I will become a Software Engineer too.</p>
 
                     <div className='mt-4 border-b-4 pb-8 mb-8 border-[#333]'>
                         <ul className='flex gap-[.2rem] flex-wrap'>
