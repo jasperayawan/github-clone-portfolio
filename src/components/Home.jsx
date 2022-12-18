@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Profile from '../assets/jasp (2).png'
 import blueBadge from '../assets/My project (1).png'
 import Typewriter from 'typewriter-effect'
-import { FaFacebook, FaFolder, FaProjectDiagram,FaPhone, FaVideo, FaInternetExplorer, FaBars, FaEye} from 'react-icons/fa'
+import { FaFacebook, FaFolder, FaProjectDiagram,FaPhone, FaVideo, FaInternetExplorer, FaBars, FaEye, FaTimes} from 'react-icons/fa'
 import achievement1 from '../assets/certifications/certificate1.png'
 import achievement2 from '../assets/certifications/Digital certicate.jpg'
 import achievement3 from '../assets/certifications/freecodecamp.png'
@@ -27,6 +27,9 @@ import Vid1 from '../assets/videos/stopwatch.mp4'
 
 
 const Home = () => {
+    const [nav, setNav] = useState(false)
+
+    const handleClick = () => setNav(!nav)
   return (
     <div name='home' className='bg-[#0D1117] w-full lg:p-[4rem]'>
         {/**header */}
@@ -49,8 +52,24 @@ const Home = () => {
                 </div>
             </div>
             </div>
-            <div className='text-white lg:hidden'>
-                <FaBars />
+            <div onClick={handleClick} className='md:hidden z-10 text-white'>
+            {!nav ? <FaBars /> : <FaTimes/>}
+            </div>
+
+            <div className={!nav ? 'hidden' : 'absolute z-40 top-8 left-0 py-8 mx-auto mt-[2rem] rounded-md w-full text-white gap-4 bg-[#161B22] color-grey-300 flex flex-col justify-center items-center'}>
+                <div className='flex items-center justify-center border-b-[1px] w-[90%] p-2 border-gray-700'>
+                    <FaInternetExplorer /> <NavLink to='explore' className='mr-4 ml-[5px]'>Explore</NavLink>
+                </div>
+                <div className='flex items-center justify-center border-b-[1px] w-[90%] p-2 border-gray-700'>
+                    <FaVideo /> <NavLink to='explore' className='mr-4 ml-[5px]'>Videos</NavLink>
+                </div>
+                    
+                <div className='flex items-center justify-center border-b-[1px] w-[90%] p-2 border-gray-700'>
+                    <FaProjectDiagram /> <NavLink to='explore' className='mr-4 ml-[5px]'>Projects</NavLink>
+                </div>
+                <div className='flex items-center justify-center'>
+                    <FaPhone />   <NavLink to='explore' className='mr-4 ml-[5px]'>Contact</NavLink>
+                </div>
             </div>
         </header>
         {/**container */}
@@ -66,6 +85,7 @@ const Home = () => {
                         alt="" 
                         className='h-[26px]'/>
                         </div>
+                        <div className='z--10'>
                         <p className='text-[#8B949E]'>
                         <Typewriter 
                     options={{autoStart: true,
@@ -77,6 +97,7 @@ const Home = () => {
                 }}
                     />
                         </p>
+                        </div>
                     </div>
                 </div>
 
@@ -124,6 +145,7 @@ const Home = () => {
                             <img src={achievement4} alt="" className='rounded-full'/>
                        </div>
                     </div>
+                    
                 </div>
         
             </div>
