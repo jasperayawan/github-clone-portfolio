@@ -32,11 +32,24 @@ const Home = () => {
         {/**header */}
         <header className='w-full h-16 bg-[#161B22] flex justify-between items-center px-4 lg:px-8  fixed top-0 left-0'>
             <img src={Logo} alt="" className='w-[60px]'/>
-            <div className='text-white hidden lg:flex'>
-                <span className='lg:mx-8 mx-4'>Hobbies</span>
-                <span className='lg:mx-8 mx-4'>explore</span>
+            <div className='hidden lg:flex'>
+            <div className='text-white flex gap-4'>
+                <div className='flex items-center justify-center'>
+                    <FaInternetExplorer /> <NavLink to='explore' className='mr-4 ml-[5px]'>Explore</NavLink>
+                </div>
+                <div className='flex items-center justify-center'>
+                    <FaVideo /> <NavLink to='explore' className='mr-4 ml-[5px]'>Videos</NavLink>
+                </div>
+                    
+                <div className='flex items-center justify-center'>
+                    <FaProjectDiagram /> <NavLink to='explore' className='mr-4 ml-[5px]'>Projects</NavLink>
+                </div>
+                <div className='flex items-center justify-center'>
+                    <FaPhone />   <NavLink to='explore' className='mr-4 ml-[5px]'>Contact</NavLink>
+                </div>
             </div>
-            <div className='text-white'>
+            </div>
+            <div className='text-white lg:hidden'>
                 <FaBars />
             </div>
         </header>
@@ -119,22 +132,7 @@ const Home = () => {
 
             <div className='w-full h-full'>
                 <div className=''>
-                <div className=' flex text-[14px] flex-wrap justify-start gap-8 items-center text-[#b1b8c0] pb-[1rem] border-gray-700 mb-[2rem] border-b-[1px]'>
-                <div className='flex items-center justify-center'>
-                    <FaInternetExplorer /> <NavLink to='explore' className='mr-4 ml-[5px]'>Explore</NavLink>
-                </div>
-                <div className='flex items-center justify-center'>
-                    <FaVideo /> <NavLink to='explore' className='mr-4 ml-[5px]'>Videos</NavLink>
-                </div>
-                    
-                <div className='flex items-center justify-center'>
-                    <FaProjectDiagram /> <NavLink to='explore' className='mr-4 ml-[5px]'>Projects</NavLink>
-                </div>
-                <div className='flex items-center justify-center'>
-                    <FaPhone />   <NavLink to='explore' className='mr-4 ml-[5px]'>Contact</NavLink>
-                </div>
-                </div>
-
+                
                 <div className='p-4 border-[1px] border-gray-700 rounded-lg'>
                     <div className='text-[#C9D1D9] border-b-[1px] border-gray-700 pb-4 mb-4'>
                         <p className='font-mono text-[12px]'>JasperAyawan/READ.md</p>
@@ -164,7 +162,7 @@ const Home = () => {
 
                     <div>
                         <h1 className='font-bold text-gray-400'>🧰 Languages and Tools</h1>
-                        <div className='flex justify-start items-center gap-2 py-4 flex-wrap'>
+                        <div className='flex justify-start items-center gap-4 py-4 flex-wrap'>
                         <div>
                             <img src={HTML} alt="" className='w-[30px]'/>
                         </div>
