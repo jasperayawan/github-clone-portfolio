@@ -20,6 +20,9 @@ import Rreact from '../assets/pngegg (4).png';
 import Tailwind from '../assets/Tailwind-CSS-removebg-preview.png' 
 import MongOdb from '../assets/pngegg (5).png';
 import NoDE from '../assets/pngegg (6).png'
+import { DefaultPlayer as Video } from 'react-html5video'
+import 'react-html5video/dist/styles.css'
+import Vid1 from '../assets/videos/stopwatch.mp4'
 
 
 
@@ -173,7 +176,7 @@ const Home = () => {
                             <img src={Git} alt="" className='w-[30px]'/>
                         </div>
                         <div>
-                            <img src={Java} alt="" className='w-[30px]'/>
+                            <img src={Java} alt="" className='w-[50px]'/>
                         </div>
                         <div>
                             <img src={Cplusplus} alt="" className='w-[30px]'/>
@@ -193,6 +196,21 @@ const Home = () => {
                         <div>
                             <img src={NoDE} alt="" className='w-[30px]'/>
                         </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1 className='font-bold text-gray-400'>📺 Latest Youtube Videos</h1>
+                        <div>
+                         <div className='w-[200px] py-4'>
+                            <Video autoPlay loop
+                                onCanPlayThrough = {() => {
+                                    console.log('video play')
+                                }}
+                            >
+                                <source src={Vid1} type='video/webm'/>
+                            </Video>
+                         </div>
                         </div>
                     </div>
                 </div>
