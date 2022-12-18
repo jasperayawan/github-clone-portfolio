@@ -201,9 +201,9 @@ const Home = () => {
 
                     <div>
                         <h1 className='font-bold text-gray-400'>📺 Latest Youtube Videos</h1>
-                        <div>
-                         <div className='w-[200px] py-4'>
-                            <Video autoPlay loop
+                        <div className='grid grid-cols-1 lg:grid-cols-4'>
+                         <div className=' py-4'>
+                            <Video 
                                 onCanPlayThrough = {() => {
                                     console.log('video play')
                                 }}
